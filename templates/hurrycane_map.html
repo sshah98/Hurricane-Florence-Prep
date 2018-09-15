@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_68631dbafe834c09beb27f854dec3acc {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+                <div style="position: fixed;
+                            bottom: 70px; left: 50px; width: 220px; height: 100px;
+                            border:0px solid grey; z-index:9999; font-size:16px;
+                            ">&nbsp; Green: Food  <br>
+                              &nbsp; Orange: Animal Shelter &nbsp;<br>
+                              &nbsp; Red: Clinic &nbsp;<br>
+                              &nbsp; Blue: Shelter &nbsp;<br>
+                              &nbsp; Purple: Crate Pickup &nbsp;<br>
+                              &nbsp; Grey: Live Webcam &nbsp;<br>
+                </div>
+                
+    
+    <div class="folium-map" id="map_68631dbafe834c09beb27f854dec3acc" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_68631dbafe834c09beb27f854dec3acc = L.map(
+        'map_68631dbafe834c09beb27f854dec3acc', {
+        center: [38.889931, -78.009003],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_d116f51de42a428d8cdfcc7bb732d9f3 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": "abc"
+}).addTo(map_68631dbafe834c09beb27f854dec3acc);
+    
+            var marker_cluster_d3b934447f9f4db7b9617299e5188e70 = L.markerClusterGroup({});
+            map_68631dbafe834c09beb27f854dec3acc.addLayer(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var circle_marker_bdba15f8102c4e99b9d36e9dad0df09c = L.circleMarker(
+                [33.708816999999996, -79.001889],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_a635d61919284fa5840046630e00aa61 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3a44762c76a94648b6acb295966b572d = $('<div id="html_3a44762c76a94648b6acb295966b572d" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#crates "target="_blank"> crate_pickup1 </a></div>')[0];
+                popup_a635d61919284fa5840046630e00aa61.setContent(html_3a44762c76a94648b6acb295966b572d);
+            
+
+            circle_marker_bdba15f8102c4e99b9d36e9dad0df09c.bindPopup(popup_a635d61919284fa5840046630e00aa61)
+            ;
+
+            
+        
+    
+            var circle_marker_981d833948c34c26b3f26b301f67dff8 = L.circleMarker(
+                [33.753966, -78.855938],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_5aa74ee6111f4e219b5a70fa2df65a97 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8ea20600e120459ab2b7a5df493c33f0 = $('<div id="html_8ea20600e120459ab2b7a5df493c33f0" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#crates "target="_blank"> crate_pickup2 </a></div>')[0];
+                popup_5aa74ee6111f4e219b5a70fa2df65a97.setContent(html_8ea20600e120459ab2b7a5df493c33f0);
+            
+
+            circle_marker_981d833948c34c26b3f26b301f67dff8.bindPopup(popup_5aa74ee6111f4e219b5a70fa2df65a97)
+            ;
+
+            
+        
+    
+            var circle_marker_6f3411eb2c2549cbababc1d2fe7922a9 = L.circleMarker(
+                [33.755576, -78.859426],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_82f40329c3e84b09b73450dc9d050faa = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8fcfc798591a43228eda4b54089c8d08 = $('<div id="html_8fcfc798591a43228eda4b54089c8d08" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#crates "target="_blank"> crate_pickup3 </a></div>')[0];
+                popup_82f40329c3e84b09b73450dc9d050faa.setContent(html_8fcfc798591a43228eda4b54089c8d08);
+            
+
+            circle_marker_6f3411eb2c2549cbababc1d2fe7922a9.bindPopup(popup_82f40329c3e84b09b73450dc9d050faa)
+            ;
+
+            
+        
+    
+            var circle_marker_88c386fdcb174b75877aad0978248113 = L.circleMarker(
+                [33.759114000000004, -78.96625999999999],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_4ed42eb72fbf4ec986a38c5716616388 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_20ef61e07d7b48d690d7548cec53a7c3 = $('<div id="html_20ef61e07d7b48d690d7548cec53a7c3" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#crates "target="_blank"> crate_pickup4 </a></div>')[0];
+                popup_4ed42eb72fbf4ec986a38c5716616388.setContent(html_20ef61e07d7b48d690d7548cec53a7c3);
+            
+
+            circle_marker_88c386fdcb174b75877aad0978248113.bindPopup(popup_4ed42eb72fbf4ec986a38c5716616388)
+            ;
+
+            
+        
+    
+            var circle_marker_962e548dcc434879896b40a2612e0a7a = L.circleMarker(
+                [33.744144, -78.99680699999999],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "purple",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_b4ef3f7d444348678c19dc60da6e932c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2fb5b8fdc5f547499fe0a1223ff38130 = $('<div id="html_2fb5b8fdc5f547499fe0a1223ff38130" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#crates "target="_blank"> crate_pickup5 </a></div>')[0];
+                popup_b4ef3f7d444348678c19dc60da6e932c.setContent(html_2fb5b8fdc5f547499fe0a1223ff38130);
+            
+
+            circle_marker_962e548dcc434879896b40a2612e0a7a.bindPopup(popup_b4ef3f7d444348678c19dc60da6e932c)
+            ;
+
+            
+        
+    
+            var circle_marker_bf5347689f2946fab2990eade9cb5feb = L.circleMarker(
+                [33.708086, -78.889714],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_a7f34d1838444c62aeac3bbf2ba76177 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8a72979c46964841a2d7a26ebcf63549 = $('<div id="html_8a72979c46964841a2d7a26ebcf63549" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> shelter1 </a></div>')[0];
+                popup_a7f34d1838444c62aeac3bbf2ba76177.setContent(html_8a72979c46964841a2d7a26ebcf63549);
+            
+
+            circle_marker_bf5347689f2946fab2990eade9cb5feb.bindPopup(popup_a7f34d1838444c62aeac3bbf2ba76177)
+            ;
+
+            
+        
+    
+            var circle_marker_6f3e7fe819e44f82a2ba3f939bc8fcac = L.circleMarker(
+                [33.708086, -78.889714],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_38a02611805948f9b6f78873487d0a9a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9dad2c45cdf34629b63471146f6102e9 = $('<div id="html_9dad2c45cdf34629b63471146f6102e9" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> shelter2 </a></div>')[0];
+                popup_38a02611805948f9b6f78873487d0a9a.setContent(html_9dad2c45cdf34629b63471146f6102e9);
+            
+
+            circle_marker_6f3e7fe819e44f82a2ba3f939bc8fcac.bindPopup(popup_38a02611805948f9b6f78873487d0a9a)
+            ;
+
+            
+        
+    
+            var circle_marker_6cfb042ed1f741a8b3ce54050ef42df7 = L.circleMarker(
+                [33.707190999999995, -78.95656],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "blue",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_d03b34c50f144ced872194500b684bc3 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_91fb21443ea24d9697d806e04bbef1b3 = $('<div id="html_91fb21443ea24d9697d806e04bbef1b3" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> shelter3 </a></div>')[0];
+                popup_d03b34c50f144ced872194500b684bc3.setContent(html_91fb21443ea24d9697d806e04bbef1b3);
+            
+
+            circle_marker_6cfb042ed1f741a8b3ce54050ef42df7.bindPopup(popup_d03b34c50f144ced872194500b684bc3)
+            ;
+
+            
+        
+    
+            var circle_marker_36ad09b1d8bb404394cc14534cf53ea9 = L.circleMarker(
+                [33.705974, -78.95787],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_adbca5ceb5da4df7bc1001ca891b0e5b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f7801ae219f24ab89591bbb75fd9036f = $('<div id="html_f7801ae219f24ab89591bbb75fd9036f" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> ashelter1 </a></div>')[0];
+                popup_adbca5ceb5da4df7bc1001ca891b0e5b.setContent(html_f7801ae219f24ab89591bbb75fd9036f);
+            
+
+            circle_marker_36ad09b1d8bb404394cc14534cf53ea9.bindPopup(popup_adbca5ceb5da4df7bc1001ca891b0e5b)
+            ;
+
+            
+        
+    
+            var circle_marker_86795e5e13e343d0856bf7c761155a9e = L.circleMarker(
+                [33.705974, -78.96786999999999],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_f9a5b44c50cf45269fac819db116a9d2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3ee3b1af38ac46d6aea689760c57d878 = $('<div id="html_3ee3b1af38ac46d6aea689760c57d878" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> ashelter1 </a></div>')[0];
+                popup_f9a5b44c50cf45269fac819db116a9d2.setContent(html_3ee3b1af38ac46d6aea689760c57d878);
+            
+
+            circle_marker_86795e5e13e343d0856bf7c761155a9e.bindPopup(popup_f9a5b44c50cf45269fac819db116a9d2)
+            ;
+
+            
+        
+    
+            var circle_marker_9163ce49c5624f31ac0181d572afb33d = L.circleMarker(
+                [33.725974, -78.96786999999999],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "orange",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_f6c0ae2271864b2893d5fd9598045156 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c60eb9d694fe438b8ad65b488b4b4bec = $('<div id="html_c60eb9d694fe438b8ad65b488b4b4bec" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> ashelter1 </a></div>')[0];
+                popup_f6c0ae2271864b2893d5fd9598045156.setContent(html_c60eb9d694fe438b8ad65b488b4b4bec);
+            
+
+            circle_marker_9163ce49c5624f31ac0181d572afb33d.bindPopup(popup_f6c0ae2271864b2893d5fd9598045156)
+            ;
+
+            
+        
+    
+            var circle_marker_73db103f168a42a0972a73d37e085dc6 = L.circleMarker(
+                [33.6936, -78.8827],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "grey",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_beec5dca29634dfb845e55b39dba9a7d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b4aa8aeb7db749daae0679db64e85e04 = $('<div id="html_b4aa8aeb7db749daae0679db64e85e04" style="width: 100.0%; height: 100.0%;"><a href="http://98.101.204.124/record/current.jpg "target="_blank"> webcam1 </a></div>')[0];
+                popup_beec5dca29634dfb845e55b39dba9a7d.setContent(html_b4aa8aeb7db749daae0679db64e85e04);
+            
+
+            circle_marker_73db103f168a42a0972a73d37e085dc6.bindPopup(popup_beec5dca29634dfb845e55b39dba9a7d)
+            ;
+
+            
+        
+    
+            var circle_marker_df3f48591e214f7da3e2d9be123ea3ae = L.circleMarker(
+                [33.708086, -78.989714],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_25e9242f8e324ff4bc1b32a54b8578a7 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d74d4ed3af344305a629e767b25d9e9c = $('<div id="html_d74d4ed3af344305a629e767b25d9e9c" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> clinic1 </a></div>')[0];
+                popup_25e9242f8e324ff4bc1b32a54b8578a7.setContent(html_d74d4ed3af344305a629e767b25d9e9c);
+            
+
+            circle_marker_df3f48591e214f7da3e2d9be123ea3ae.bindPopup(popup_25e9242f8e324ff4bc1b32a54b8578a7)
+            ;
+
+            
+        
+    
+            var circle_marker_ed526ae7a79043a694b7d90395d71101 = L.circleMarker(
+                [33.708086, -78.889714],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_083a78fc80cb49e39a64e5e5d5e05534 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bc861daf85c345bbb8fe933fd07fdea7 = $('<div id="html_bc861daf85c345bbb8fe933fd07fdea7" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> clinic2 </a></div>')[0];
+                popup_083a78fc80cb49e39a64e5e5d5e05534.setContent(html_bc861daf85c345bbb8fe933fd07fdea7);
+            
+
+            circle_marker_ed526ae7a79043a694b7d90395d71101.bindPopup(popup_083a78fc80cb49e39a64e5e5d5e05534)
+            ;
+
+            
+        
+    
+            var circle_marker_fdf92faf97ab42569a23bb0b9415af8a = L.circleMarker(
+                [33.707190999999995, -78.95656],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_effddb51969f4ea7b47438eb637fb38b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b0f2384c18ba409da24f4f9b85ff313e = $('<div id="html_b0f2384c18ba409da24f4f9b85ff313e" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> food1 </a></div>')[0];
+                popup_effddb51969f4ea7b47438eb637fb38b.setContent(html_b0f2384c18ba409da24f4f9b85ff313e);
+            
+
+            circle_marker_fdf92faf97ab42569a23bb0b9415af8a.bindPopup(popup_effddb51969f4ea7b47438eb637fb38b)
+            ;
+
+            
+        
+    
+            var circle_marker_c82cb8ebf2ac4091b305e2d397e00966 = L.circleMarker(
+                [33.707190999999995, -78.96656],
+                {
+  "bubblingMouseEvents": true,
+  "color": "grey",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.6,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(marker_cluster_d3b934447f9f4db7b9617299e5188e70);
+            
+    
+            var popup_0fd606adee4240688358be5aa20ef80c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bdb6df378b094d1d8306ef2b7b5f89f4 = $('<div id="html_bdb6df378b094d1d8306ef2b7b5f89f4" style="width: 100.0%; height: 100.0%;"><a href="https://hurrycane.herokuapp.com/#info "target="_blank"> food2 </a></div>')[0];
+                popup_0fd606adee4240688358be5aa20ef80c.setContent(html_bdb6df378b094d1d8306ef2b7b5f89f4);
+            
+
+            circle_marker_c82cb8ebf2ac4091b305e2d397e00966.bindPopup(popup_0fd606adee4240688358be5aa20ef80c)
+            ;
+
+            
+        
+</script>
