@@ -10,5 +10,9 @@ def index():
 def map():
     return render_template('hurrycane_map.html')
 
+@app.route('/info')
+def info():
+    return render_template('springharborhospital.pdf')
+
 if __name__ == '__main__':
     app.run(debug=True)
